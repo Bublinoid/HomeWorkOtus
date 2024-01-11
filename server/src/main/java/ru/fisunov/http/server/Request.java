@@ -24,6 +24,10 @@ public class Request {
         this.params = parseGetRequestParams(raw);
     }
 
+    public InputStream getInputStream() {
+        return inputStream;
+    }
+
     private String parseUri(String request) {
         int startIndex = request.indexOf(' ');
         int endIndex = request.indexOf(' ', startIndex + 1);
@@ -59,5 +63,9 @@ public class Request {
 
     public String getParam(String key) {
         return params.get(key);
+    }
+
+    public String getMethod() {
+        return raw.split(" ")[0];
     }
 }

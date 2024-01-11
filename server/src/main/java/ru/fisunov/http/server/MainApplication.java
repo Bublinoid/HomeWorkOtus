@@ -11,7 +11,7 @@ public class MainApplication {
     public static void main(String[] args) {
         Server server = new Server(PORT);
         server.start();
-        System.out.println();
+
     }
 }
 
